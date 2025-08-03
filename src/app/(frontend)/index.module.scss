@@ -1,0 +1,49 @@
+.container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+.tabButton {
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.tabButtonActive {
+  color: #7c3aed;
+  border-bottom-color: #7c3aed;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: start;
+}
+
+.noResults {
+  color: #6b7280;
+}
