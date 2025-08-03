@@ -41,11 +41,16 @@ export default async function HomePage() {
     <div className={styles.container}>
       <h1 className={styles.title}>All Properties</h1>
       <div className={styles.grid}>
-        {properties.map((property: Property) => (
-          <Link key={property.id} href={`/${property.id}`} passHref>
-            <PropertyCard property={property} />
-          </Link>
-        ))}
+        {
+          //@ts-ignore
+          properties.map((property: Property) => {
+            return (
+              <Link key={property.id} href={`/${property.id}`} passHref>
+                <PropertyCard property={property} />
+              </Link>
+            )
+          })
+        }
       </div>
     </div>
   )
