@@ -7,7 +7,9 @@ interface Property {
   title?: string
   description?: string
   root?: any
-  image?: any
+  image?: {
+    url: string
+  }
   status?: string
   [key: string]: any
 }

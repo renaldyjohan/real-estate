@@ -1,67 +1,95 @@
-# Payload Blank Template
+# 🏡 Real-Estate Project
 
-This template comes configured with the bare minimum to get started on anything you need.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/renaldyjohan/real-estate/blob/main/LICENSE)  
+[![Node.js CI](https://github.com/renaldyjohan/real-estate/actions/workflows/nodejs.yml/badge.svg)](https://github.com/renaldyjohan/real-estate/actions/workflows/nodejs.yml)
 
-## Quick start
+---
 
-This template can be deployed directly from our Cloud hosting and it will setup MongoDB and cloud S3 object storage for media.
+## 🚀 Overview
 
-## Quick Start - local setup
+A **modern and scalable real estate web application template** powered by **Payload CMS**, designed for efficient property listings, user authentication, and media management. This project is a great starting point for building real estate marketplaces or agency websites with ease and flexibility.
 
-To spin up this template locally, follow these steps:
+---
 
-### Clone
+## ✨ Key Features
 
-After you click the `Deploy` button above, you'll want to have standalone copy of this repo on your machine. If you've already cloned this repo, skip to [Development](#development).
+- 🔐 **User Authentication & Authorization** with secure session management
+- 🖼️ **Media Management** to handle property images and documents effortlessly
+- 📄 **Flexible CMS Schema** built on Payload CMS for customization
+- 🐳 **Docker Compose** setup for simplified local development and deployment
+- ⚙️ **Easy Environment Configuration** with straightforward .env management
 
-### Development
+---
 
-1. First [clone the repo](#clone) if you have not done so already
-2. `cd my-project && cp .env.example .env` to copy the example environment variables. You'll need to add the `MONGODB_URI` from your Cloud project to your `.env` if you want to use S3 storage and the MongoDB database that was created for you.
+## 🛠️ Technologies Used
 
-3. `pnpm install && pnpm dev` to install dependencies and start the dev server
-4. open `http://localhost:3000` to open the app in your browser
+- **Node.js** & **Express.js** (Backend server)
+- **Payload CMS** (Headless CMS for content and media management)
+- **MongoDB** (Database)
+- **Docker & Docker Compose** (Containerization and environment setup)
+- React-powered **Payload Admin Panel**
 
-That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
+---
 
-#### Docker (Optional)
+## 📥 Getting Started
 
-If you prefer to use Docker for local development instead of a local MongoDB instance, the provided docker-compose.yml file can be used.
+### Prerequisites
 
-To do so, follow these steps:
+- [Docker](https://docker.com) & [Docker Compose](https://docs.docker.com/compose/) installed
+- [Git](https://git-scm.com/) installed
 
-- Modify the `MONGODB_URI` in your `.env` file to `mongodb://127.0.0.1/<dbname>`
-- Modify the `docker-compose.yml` file's `MONGODB_URI` to match the above `<dbname>`
-- Run `docker-compose up` to start the database, optionally pass `-d` to run in the background.
+### Installation & Setup
 
-## How it works
+1. **Clone the repository**
 
-The Payload config is tailored specifically to the needs of most websites. It is pre-configured in the following ways:
+   ```bash
+   git clone https://github.com/renaldyjohan/real-estate.git
+   cd real-estate
+   ```
 
-### Collections
+2. **Configure Environment Variables**  
+   Copy the example environment file and update as needed:
 
-See the [Collections](https://payloadcms.com/docs/configuration/collections) docs for details on how to extend this functionality.
+   ```bash
+   cp .env.example .env
+   ```
 
-- #### Users (Authentication)
+   Edit `.env` with the following vital details:
 
-  Users are auth-enabled collections that have access to the admin panel.
+   ```env
+   # MongoDB connection string - replace with your own DB URI
+   MONGODB_URI=mongodb://localhost:27017/realestate
 
-  For additional help, see the official [Auth Example](https://github.com/payloadcms/payload/tree/main/examples/auth) or the [Authentication](https://payloadcms.com/docs/authentication/overview#authentication-overview) docs.
+   # Payload CMS secret key for authentication - use a strong and secure key
+   PAYLOAD_SECRET=supersecretkey123
+   ```
 
-- #### Media
+### Running Locally
 
-  This is the uploads enabled collection. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
+Start the application with Docker Compose:
 
-### Docker
+```bash
+docker-compose up
+```
 
-Alternatively, you can use [Docker](https://www.docker.com) to spin up this template locally. To do so, follow these steps:
+Open your browser and visit:  
+[http://localhost:3000/admin](http://localhost:3000/admin)  
+Login with your credentials to manage real estate listings and media.
 
-1. Follow [steps 1 and 2 from above](#development), the docker-compose file will automatically use the `.env` file in your project root
-1. Next run `docker-compose up`
-1. Follow [steps 4 and 5 from above](#development) to login and create your first admin user
+---
 
-That's it! The Docker instance will help you get up and running quickly while also standardizing the development environment across your teams.
+## ☁️ Deployment
 
-## Questions
+This project is deployable on any Docker-compatible cloud provider such as AWS, Azure, Heroku, or DigitalOcean. Ensure the environment variables on your production server mirror those in your `.env` file.
 
-If you have any issues or questions, reach out to us on [Discord](https://discord.com/invite/payload) or start a [GitHub discussion](https://github.com/payloadcms/payload/discussions).
+---
+
+## 🤝 Contributing
+
+Contributions are **warmly welcomed**!
+
+- Fork the repository
+- Add features or fixes
+- Submit a pull request with a clear description of changes
+
+---
