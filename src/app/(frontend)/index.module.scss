@@ -47,3 +47,23 @@
 .noResults {
   color: #6b7280;
 }
+
+/* Remove default link styles on all links wrapping PropertyCard */
+.grid a {
+  color: inherit; /* Make link text inherit color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make anchor behave like a block element to wrap entire card */
+  cursor: pointer; /* Cursor pointer on hover */
+  outline: none; /* Remove default outline */
+}
+
+.grid a:hover,
+.grid a:focus {
+  text-decoration: none; /* No underline on hover/focus */
+  outline: 2px solid #7c3aed; /* Optional: visible focus outline for accessibility */
+}
+
+/* You can add any other hover styles you want for better UX */
+.grid a:hover .cardContainer {
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
